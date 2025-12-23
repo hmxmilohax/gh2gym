@@ -453,7 +453,11 @@
       )
       {if $randomizer
          {set $ret
+            #ifdef HX_XBOX
+            {campaign is_song_passed {elem {find $syscfg mapped_songs $song} 1}}
+            #else
             {find_elem $beat_songs_array {elem {find $syscfg mapped_songs $song} 1}}
+            #endif
          }
       }
       $ret
