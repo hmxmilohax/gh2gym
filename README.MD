@@ -108,3 +108,5 @@ Sulfrix - Consultation
 Dark - Consultation  
 LocalH - Consultation
 SlothDemon1991 - QA
+
+And players like you!
