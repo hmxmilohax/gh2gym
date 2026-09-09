@@ -12,8 +12,15 @@
    (file "")
    (won_campaign FALSE)
    (load {set_loader_period 13})
-   (enter {set_loader_period 5} #ifdef HX_XBOX {profilemgr enable_xmp} #endif)
-   #ifdef HX_XBOX (exit {profilemgr disable_xmp}) #endif
+   (enter
+      {set_loader_period 5}
+      #ifdef HX_XBOX
+      {profilemgr enable_xmp}
+      #endif
+   )
+   #ifdef HX_XBOX
+   (exit {profilemgr disable_xmp})
+   #endif
    (set_defaults
       {set $first_screen main_screen}
       {set $autosave FALSE}
@@ -42,15 +49,13 @@
       }
    )
    #else
-   (TRANSITION_COMPLETE_MSG
-      {$this play_movie}
-   )
+   (TRANSITION_COMPLETE_MSG {$this play_movie})
    #endif
    (play_movie
       {meta play_movie CUT_SCENE_VIDEO}
-      ;{if_else {> {campaign num_profiles} 0} ;skip guitar help for fast
+      ;{if_else {|| $permadeath $randomizer {> {campaign num_profiles} 0}} ;skip guitar help for fast
          {ui goto_screen splash_screen}
-      ;   {ui goto_screen guitar_help_screen} ;skip guitar help for fast
+         ;{ui goto_screen guitar_help_screen} ;skip guitar help for fast
       ;}
    )
 }

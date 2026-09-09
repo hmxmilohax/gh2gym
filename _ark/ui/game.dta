@@ -87,7 +87,7 @@
          {if
             ;{&&
             ;   {== {game get_venue} battle} ;explode drummer on any venue for tonightimgonna
-               {&& {== {game want_encore_fx} TRUE} $tonight}
+            {&& {== {game want_encore_fx} TRUE} $tonight}
             ;}
             {{{world_panel loaded_dir} find drummer} show_drummer}
          }
@@ -186,7 +186,7 @@
             {if
                ;{&&
                ;   {== {game get_venue} battle} ;explode drummer on any venue for tonightimgonna
-                  {&& {== {game want_encore_fx} TRUE} $tonight}
+               {&& {== {game want_encore_fx} TRUE} $tonight}
                ;}
                {do
                   {script_task
@@ -222,11 +222,7 @@
                         }
                      }
                   }
-                  {if
-                     {&&
-                        {== {gamecfg get_difficulty 0} kDifficultyExpert}
-                        $jordan
-                     }
+                  {if {&& {== {gamecfg get_difficulty 0} kDifficultyExpert} $jordan}
                      {achievements submit jordan}
                   }
                }
@@ -409,7 +405,7 @@
          {handle ($this multi_player)}
          {handle ($this single_player)}
       }
-      {$this set_showing TRUE}
+      {$this set_showing TRUE} ;why does gym do this?
       {$this set_paused FALSE}
    )
    #ifdef HX_XBOX
@@ -421,17 +417,17 @@
 {new FadePanel
    fade_panel
    (file fade.milo)
-   #ifdef HX_XBOX
    (enter
+      #ifdef HX_XBOX
       {do
          ($attract {== {gamecfg get mode} attract})
          {press_any_button.lbl set_showing $attract}
          {logo.mesh set_showing $attract}
       }
+      #else
+      {press_any_button.lbl set_showing {game_screen get attract_mode}}
+      #endif
    )
-   #else
-   (enter {press_any_button.lbl set_showing {game_screen get attract_mode}})
-   #endif
 }
 #ifdef HX_XBOX
 #define TRACK_MASK (track_mask)
@@ -463,11 +459,7 @@
             {if
                {||
                   {! {game get game_over}}
-                  {&&
-                     {game get game_over}
-                     $game_lost
-                     {! $permadeath}
-                  }
+                  {&& {game get game_over} $game_lost {! $permadeath}}
                }
                {$this pause_game}
             }

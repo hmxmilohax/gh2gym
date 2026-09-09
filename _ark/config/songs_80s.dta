@@ -11,7 +11,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed 18andlife} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed 18andlife}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/18andlife/18andlife)
       (tracks
@@ -86,7 +91,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed aintnothinbut} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed aintnothinbut}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/aintnothinbut/aintnothinbut)
       (tracks
@@ -161,7 +171,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed ballstothewall} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed ballstothewall}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/ballstothewall/ballstothewall)
       (tracks
@@ -236,7 +251,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed ballroomblitz} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed ballroomblitz}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/ballroomblitz/ballroomblitz)
       (tracks
@@ -315,7 +335,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed bangyourhead} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed bangyourhead}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/bangyourhead/bangyourhead)
       (tracks
@@ -390,7 +415,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed bathroomwall} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed bathroomwall}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/bathroomwall/bathroomwall)
       (tracks
@@ -465,7 +495,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed caughtinamosh} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed caughtinamosh}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/caughtinamosh/caughtinamosh)
       (tracks
@@ -544,7 +579,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed electriceye} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed electriceye}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/electriceye/electriceye)
       (tracks
@@ -623,7 +663,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed heatofthemoment} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed heatofthemoment}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/heatofthemoment/heatofthemoment)
       (tracks
@@ -698,7 +743,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed holdonloosely} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed holdonloosely}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/holdonloosely/holdonloosely)
       (tracks
@@ -773,7 +823,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed holydiver} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed holydiver}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/holydiver/holydiver)
       (tracks
@@ -848,7 +903,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed iran} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed iran}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/iran/iran)
       (tracks
@@ -923,7 +983,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed iwannarock} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed iwannarock}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/iwannarock/iwannarock)
       (tracks
@@ -998,7 +1063,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed lonelyisthenight} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed lonelyisthenight}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/lonelyisthenight/lonelyisthenight)
       (tracks
@@ -1073,7 +1143,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed losangeles} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed losangeles}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/losangeles/losangeles)
       (tracks
@@ -1153,7 +1228,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed noonelikeyou} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed noonelikeyou}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/noonelikeyou/noonelikeyou)
       (tracks
@@ -1228,7 +1308,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed onlyalad} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed onlyalad}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/onlyalad/onlyalad)
       (tracks
@@ -1307,7 +1392,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed playwithme} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed playwithme}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/playwithme/playwithme)
       (tracks
@@ -1386,7 +1476,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed policetruck} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed policetruck}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/policetruck/policetruck)
       (tracks
@@ -1465,7 +1560,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed radarlove} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed radarlove}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/radarlove/radarlove)
       (tracks
@@ -1544,7 +1644,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed roundandround} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed roundandround}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/roundandround/roundandround)
       (tracks
@@ -1619,7 +1724,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed seventeen} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed seventeen}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/seventeen/seventeen)
       (tracks
@@ -1694,7 +1804,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed shakin} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed shakin}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/shakin/shakin)
       (tracks
@@ -1769,7 +1884,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed synchronicity2} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed synchronicity2}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/synchronicity2/synchronicity2)
       (tracks
@@ -1844,7 +1964,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed turningjapanese} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed turningjapanese}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/turningjapanese/turningjapanese)
       (tracks
@@ -1923,7 +2048,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed thewarrior} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed thewarrior}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/thewarrior/thewarrior)
       (tracks
@@ -1999,7 +2129,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed wegotthebeat} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed wegotthebeat}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/wegotthebeat/wegotthebeat)
       (tracks
@@ -2075,7 +2210,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed whatilikeaboutyou} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed whatilikeaboutyou}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/whatilikeaboutyou/whatilikeaboutyou)
       (tracks
@@ -2154,7 +2294,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed wrathchild} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed wrathchild}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/wrathchild/wrathchild)
       (tracks
@@ -2229,7 +2374,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed becauseitsmidnite} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed becauseitsmidnite}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/becauseitsmidnite/becauseitsmidnite)
       (tracks
@@ -2304,7 +2454,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed becauseitsmidnite2} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed becauseitsmidnite2}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/becauseitsmidnite/becauseitsmidnite)
       (tracks

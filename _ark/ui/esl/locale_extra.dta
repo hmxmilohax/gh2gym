@@ -1,17 +1,17 @@
 #ifdef GAME_GH2
-#ifdef HX_XBOX
-(highscore_dummy_0 "Reiko")
-(highscore_dummy_1 "Devon")
-(highscore_dummy_2 "Gayle")
-(highscore_dummy_3 "Matt")
-(highscore_dummy_4 "Kelly")
-#else
-(highscore_dummy_0 "Finn")
-(highscore_dummy_1 "Alex D.")
-(highscore_dummy_2 "Owen")
-(highscore_dummy_3 "Kayley")
-(highscore_dummy_4 "Liana")
-#endif
+   #ifdef HX_XBOX
+   (highscore_dummy_0 "Reiko")
+   (highscore_dummy_1 "Devon")
+   (highscore_dummy_2 "Gayle")
+   (highscore_dummy_3 "Matt")
+   (highscore_dummy_4 "Kelly")
+   #else
+   (highscore_dummy_0 "Finn")
+   (highscore_dummy_1 "Alex D.")
+   (highscore_dummy_2 "Owen")
+   (highscore_dummy_3 "Kayley")
+   (highscore_dummy_4 "Liana")
+   #endif
 #else
 (highscore_dummy_0 "Christine")
 (highscore_dummy_1 "Hank")

@@ -24,7 +24,10 @@
       {practice.btn set text_token lose_practice}
       {pause sync_objects}
    )
-   (exit {restart.btn set nav_down audio_options.btn} {$this set_focus resume.btn})
+   (exit
+      {restart.btn set nav_down audio_options.btn}
+      {$this set_focus resume.btn}
+   )
 }
 #define PAUSE_SCREEN_HANDLERS (
    (allow_back FALSE)
@@ -45,7 +48,7 @@
       {synth stop_all_sfx}
       {synth play_sequence button_play}
       ;{if_else {game get intro_complete}
-         {game_restart_fast} ;always game restart fast to skip repeating intro sequence
+      {game_restart_fast} ;always game restart fast to skip repeating intro sequence
       ;   {game_restart}
       ;}
    )
@@ -302,7 +305,11 @@
    (in_game TRUE)
    (lefty_switch 0)
    PAUSE_SCREEN_HANDLERS
+   #ifdef HX_EE
+   PAUSE_SELECT_START_HANDLER
+   #endif
    (helpbar (default ((fret1 help_continue))))
+   #ifdef HX_XBOX
    (SELECT_START_MSG
       {switch $component
          (restart.btn {lefty_restart_screen restart})
@@ -319,6 +326,7 @@
          )
       }
    )
+   #endif
 }
 {new GHPanel
    pause_confirm_quit_panel

@@ -12,17 +12,24 @@
       {set $main_entered TRUE}
       {set $leaderboards_mode FALSE}
       #ifdef HX_XBOX
-      #ifdef GAME_GH2
-      {$this disable main_leaderboards.btn}
-      #endif
+         #ifdef GAME_GH2
+         {$this disable main_leaderboards.btn}
+         #endif
       #endif
       {practice_sel_section_screen set career_mode FALSE}
       {$this reset_player_settings}
       {if {! [already_entered]}
          {synth play_sequence meta_lick}
-         {if {&& {== {game get_controller 0} guitar} {== {campaign tutorials_done} 0}}
-            {$this set_focus main_tutorial.btn}
-         }
+         ;dx don't force highlight tutorials, we dont need to git gud
+         ;   {if
+         ;      {&&
+         ;         {==
+         ;            {game get_controller 0}
+         ;            guitar}
+         ;         {==
+         ;            {campaign tutorials_done}
+         ;            0}}
+         ;      {$this set_focus main_tutorial.btn}}
          {$this set already_entered TRUE}
       }
       {game set_tutorial_running FALSE}
@@ -51,10 +58,12 @@
          #endif
       #endif
       ;enable hyperspeed
-      {if {&& {! $cheat_enabled_hyper_speed_mode} {! $turned_off}}
-         {set $cheat_enabled_hyper_speed_mode TRUE}
-         {main_screen display_cheat_msg cheat_hyper_speed_mode TRUE}
-         {play_sfx cheat}
+      {if {|| $permadeath $randomizer}
+         {if {&& {! $cheat_enabled_hyper_speed_mode} {! $turned_off}}
+            {set $cheat_enabled_hyper_speed_mode TRUE}
+            {main_screen display_cheat_msg cheat_hyper_speed_mode TRUE}
+            {play_sfx cheat}
+         }
       }
    )
    (skip_career_setup
@@ -65,10 +74,7 @@
          {game set_character $first_char TRUE}
       }
       {if $set_first_guitar_once
-         {game set_guitar
-            $first_guitar_body
-            $first_guitar_skin
-         }
+         {game set_guitar $first_guitar_body $first_guitar_skin}
       }
       {if $set_first_diff_once
          {{game get_player_config 0} set_difficulty $first_diff}
@@ -86,7 +92,14 @@
       {switch $component
          (main_career.btn
             {gamecfg set mode career}
-            {if_else {&& $permadeath $set_first_name_once $set_first_char_once $set_first_guitar_once $set_first_diff_once}
+            {if_else
+               {&&
+                  $permadeath
+                  $set_first_name_once
+                  $set_first_char_once
+                  $set_first_guitar_once
+                  $set_first_diff_once
+               }
                {$this skip_career_setup}
                {if_else {> {campaign num_profiles} 0}
                   {ui goto_screen chooseprof_screen}

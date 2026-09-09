@@ -251,7 +251,19 @@
          {do
             ($config {game get_player_config 0})
             {multi_char_outfit0 set_active TRUE}
-            {if_else {> {$this num_outfits {$config get_character}} #ifdef HX_XBOX #ifdef GAME_GH2 1 #else 2 #endif #else 1 #endif}
+            {if_else
+               {>
+                  {$this num_outfits {$config get_character}}
+                  #ifdef HX_XBOX
+                     #ifdef GAME_GH2
+                     1
+                     #else
+                     2
+                     #endif
+                  #else
+                  1
+                  #endif
+               }
                {do
                   {{multi_char_outfit0 find outfit.grp} set_showing TRUE}
                   {{multi_char_outfit0 find outfit1.btn} set_text
@@ -284,7 +296,19 @@
          {do
             ($config {game get_player_config 1})
             {multi_char_outfit1 set_active TRUE}
-            {if_else {> {$this num_outfits {$config get_character}} #ifdef HX_XBOX #ifdef GAME_GH2 1 #else 2 #endif #else 1 #endif}
+            {if_else
+               {>
+                  {$this num_outfits {$config get_character}}
+                  #ifdef HX_XBOX
+                     #ifdef GAME_GH2
+                     1
+                     #else
+                     2
+                     #endif
+                  #else
+                  1
+                  #endif
+               }
                {do
                   {{multi_char_outfit1 find outfit.grp} set_showing TRUE}
                   {{multi_char_outfit1 find outfit1.btn} set_text
@@ -1048,6 +1072,7 @@
    )
    (enter {world_panel set_showing FALSE})
 }
+#ifdef HX_XBOX
 #define kPosP1 (1)
 #define kPosCenter (2)
 #define kPosP2 (3)
@@ -1283,3 +1308,4 @@
       )
    )
 }
+#endif

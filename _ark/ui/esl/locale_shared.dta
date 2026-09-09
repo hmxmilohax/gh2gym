@@ -5,7 +5,13 @@
 #endif
 (mc_loading "Cargando...")
 (song_current_venue
-   {switch {- {size {find $syscfg campaign order battle}} 2}
+   {switch
+      {-
+         {size
+            {find $syscfg campaign order battle}
+         }
+         2
+      }
       (-1 "Supera %i/-1 temas para seguir")
       (0 "Supera %i/0 temas para seguir")
       (1 "Supera %i/1 temas para seguir")

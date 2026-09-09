@@ -2,12 +2,28 @@
    (type guitar)
    (skins
       (lp_cherry
-         (outfit {if_else {== {game get_track_sym 0} bass} bass_music_black lespaull})
-         (mat {if_else {== {game get_track_sym 0} bass} bass_music_black.mat guitar_lespaul_burst.mat})
+         (outfit
+            {if_else {== {game get_track_sym 0} bass}
+               bass_music_black
+               lespaull
+            }
+         )
+         (mat
+            {if_else {== {game get_track_sym 0} bass}
+               bass_music_black.mat
+               guitar_lespaul_burst.mat
+            }
+         )
       )
       (lp_cayenne
          (outfit lp_cayenne)
-         (mat #ifdef HX_XBOX guitar_lespaul_cayenne #else lp_cayenne.mat #endif)
+         (mat
+            #ifdef HX_XBOX
+            guitar_lespaul_cayenne
+            #else
+            lp_cayenne.mat
+            #endif
+         )
       )
       (lp_goddessburst
          (outfit lp_goddessburst)
@@ -23,17 +39,27 @@
    (type guitar)
    (skins
       (sg_cherry
-         (outfit {if_else {== {game get_track_sym 0} bass} bass_music_lava guitar_sg})
-         (mat {if_else {== {game get_track_sym 0} bass} bass_music_lava.mat guitar_sg_cherry.mat})
+         (outfit
+            {if_else {== {game get_track_sym 0} bass}
+               bass_music_lava
+               guitar_sg
+            }
+         )
+         (mat
+            {if_else {== {game get_track_sym 0} bass}
+               bass_music_lava.mat
+               guitar_sg_cherry.mat
+            }
+         )
       )
       (sg_white
          #ifdef HX_XBOX
-	 (outfit guitar_sg_goddess_white)
+         (outfit guitar_sg_goddess_white)
          (mat goddess_white.mat)
-	 #else
-	 (outfit guitar_sg)
+         #else
+         (outfit guitar_sg)
          (mat guitar_sg_platinum.mat)
-	 #endif
+         #endif
       )
       (sg_gt
          (outfit guitar_sg_gt)
@@ -49,8 +75,18 @@
    (type guitar)
    (skins
       (fv_white
-         (outfit {if_else {== {game get_track_sym 0} bass} bass_sg_cream fv_white})
-         (mat {if_else {== {game get_track_sym 0} bass} bass_sg_cream.mat fv_white.mat})
+         (outfit
+            {if_else {== {game get_track_sym 0} bass}
+               bass_sg_cream
+               fv_white
+            }
+         )
+         (mat
+            {if_else {== {game get_track_sym 0} bass}
+               bass_sg_cream.mat
+               fv_white.mat
+            }
+         )
       )
       (fv_v2
          (outfit flyingv_v2)
@@ -198,7 +234,13 @@
       )
       (es_cherry
          (outfit es335_cherry)
-         (mat #ifdef HX_XBOX es335_cherry.mat #else guitar_firebird.mat #endif)
+         (mat
+            #ifdef HX_XBOX
+            es335_cherry.mat
+            #else
+            guitar_firebird.mat
+            #endif
+         )
       )
    )
 )

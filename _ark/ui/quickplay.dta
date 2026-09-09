@@ -71,10 +71,7 @@
          )
       )
    )
-   (SELECT_START_MSG
-      {ui goto_screen qp_selpart_screen}
-      kDataUnhandled
-   )
+   (SELECT_START_MSG {ui goto_screen qp_selpart_screen} kDataUnhandled)
 }
 {new GHPanel
    qp_selpart_panel
@@ -84,13 +81,35 @@
    (set_button_text
       {do
          ($song {gamecfg get_song}) ;setup song variable for use in this block
-         {part0.btn set_text {sprint "sg_" {song_provider get_instrument $song 0}}} ;for some reason hmx adds "sg_" to all their instrument localizations. set part 0 label to the 1st instrument track name
-         {if_else {|| {song_provider has_instrument $song bass} {song_provider has_instrument $song rhythm}}
-            {part1.btn set_text {sprint "sg_" {song_provider get_instrument $song 1}}} ;set part 1 label to the 2nd instrument track name in the song definition
+         {part0.btn set_text
+            {sprint
+               "sg_"
+               {song_provider get_instrument $song 0}
+            }
+         } ;for some reason hmx adds "sg_" to all their instrument localizations. set part 0 label to the 1st instrument track name
+         {if_else
+            {||
+               {song_provider has_instrument $song bass}
+               {song_provider has_instrument $song rhythm}
+            }
+            {part1.btn set_text
+               {sprint
+                  "sg_"
+                  {song_provider get_instrument $song 1}
+               }
+            } ;set part 1 label to the 2nd instrument track name in the song definition
             {part0.btn set_text "sg_lead"}
          }
-         {if {|| {song_provider has_instrument $song bass} {song_provider has_instrument $song rhythm}}
-            {if {== {song_provider get_instrument $song 1} "rhythm"} ;if the second instrument track in the song definition is rhythm
+         {if
+            {||
+               {song_provider has_instrument $song bass}
+               {song_provider has_instrument $song rhythm}
+            }
+            {if
+               {==
+                  {song_provider get_instrument $song 1}
+                  "rhythm"
+               } ;if the second instrument track in the song definition is rhythm
                {part0.btn set_text "sg_lead"} ;then set part 0 to be "lead" instead of "guitar"
             }
          }
@@ -121,7 +140,11 @@
       {do
          ($song {gamecfg get_song})
          {game set_quickplay}
-         {if {|| {song_provider has_instrument $song bass} {song_provider has_instrument $song rhythm}}
+         {if
+            {||
+               {song_provider has_instrument $song bass}
+               {song_provider has_instrument $song rhythm}
+            }
             {switch {song_provider get_instrument $song 1}
                (bass {gamecfg set_track_type bass})
                (rhythm {gamecfg set_track_type rhythm})
@@ -134,7 +157,11 @@
       {$this add_diff_button}
       {$this bass_rhy_switch}
    )
-   (exit {part1.btn set nav_down part0.btn} {$this set_focus part0.btn} {qp_selpart_panel sync_objects})
+   (exit
+      {part1.btn set nav_down part0.btn}
+      {$this set_focus part0.btn}
+      {qp_selpart_panel sync_objects}
+   )
    (SELECT_START_MSG
       {switch $component
          (part0.btn

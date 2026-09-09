@@ -14,15 +14,29 @@
       {set $temp_lowest_acc 100.0}
       ;this checks if permadeath non fc runs passed the required threshold to go to endgame
       ;for single player career and multi coop
-      {if {&& $permadeath {|| {== career {gamecfg get mode}} {== multi_coop {gamecfg get mode}}}}
+      {if
+         {&&
+            $permadeath
+            {|| {== career {gamecfg get mode}} {== multi_coop {gamecfg get mode}}}
+         }
          {gamecfg foreach_player $player
-               {if $counting_p1
-                  {set $counting_p1 FALSE}
-                  {set $percent_hit_frac1 {* {/ {$player gems_hit} {'+' {$player gems_hit} {$player gems_passed}}} 100}}
+            {if $counting_p1
+               {set $counting_p1 FALSE}
+               {set $percent_hit_frac1
+                  {*
+                     {/ {$player gems_hit} {'+' {$player gems_hit} {$player gems_passed}}}
+                     100
+                  }
                }
-               {if {! $counting_p1}
-                  {set $percent_hit_frac2 {* {/ {$player gems_hit} {'+' {$player gems_hit} {$player gems_passed}}} 100}}
+            }
+            {if {! $counting_p1}
+               {set $percent_hit_frac2
+                  {*
+                     {/ {$player gems_hit} {'+' {$player gems_hit} {$player gems_passed}}}
+                     100
+                  }
                }
+            }
          }
          {if {!= $accuracy_threshold_elem 0}
             {if
@@ -164,10 +178,36 @@
             ;#ifdef HX_XBOX
             ;{endgame_encore_panel set freebird $freebird}
             ;show final song encore flow regardless of campaign
-            {endgame_encore_panel set is_final_song
-               {== {gamecfg get_song}
-                  {elem {find $syscfg campaign order #ifdef GAME_GH2 stone #else arena #endif}
-                     {- {size {find $syscfg campaign order #ifdef GAME_GH2 stone #else arena #endif}} 2}
+            {endgame_encore_panel set
+               is_final_song
+               {==
+                  {gamecfg get_song}
+                  {elem
+                     {find
+                        $syscfg
+                        campaign
+                        order
+                        #ifdef GAME_GH2
+                        stone
+                        #else
+                        arena
+                        #endif
+                     }
+                     {-
+                        {size
+                           {find
+                              $syscfg
+                              campaign
+                              order
+                              #ifdef GAME_GH2
+                              stone
+                              #else
+                              arena
+                              #endif
+                           }
+                        }
+                        2
+                     }
                   }
                }
             }
@@ -458,7 +498,12 @@
          {endgame_streak_data.lbl set_localized_text
             {sprint {$player longest_streak}}
          }
-         {if_else {&& {!= $percent_hit_frac1 100.0} $permadeath {!= $accuracy_threshold_elem 0}}
+         {if_else
+            {&&
+               {!= $percent_hit_frac1 100.0}
+               $permadeath
+               {!= $accuracy_threshold_elem 0}
+            }
             {endgame_percent_data.lbl set_localized_text
                {sprintf {localize eg_percent_frac_format} $percent_hit_frac1}
             }
@@ -1434,10 +1479,18 @@
       }
       {if_else {== $lives_lost {- $num_of_lives 1}}
          {{dialog find dl_message.lbl} set_localized_text
-            {localize permadeath_lost_final_perc $percent_hit_frac1 $accuracy_threshold}
+            {localize permadeath_lost_final_perc
+               $percent_hit_frac1
+               $accuracy_threshold
+            }
          }
          {{dialog find dl_message.lbl} set_localized_text
-            {sprintf {localize permadeath_lost_perc} $percent_hit_frac1 $accuracy_threshold {- $num_of_lives $lives_lost}}
+            {sprintf
+               {localize permadeath_lost_perc}
+               $percent_hit_frac1
+               $accuracy_threshold
+               {- $num_of_lives $lives_lost}
+            }
          }
       }
       ;if we completely ran out of lives
@@ -1446,7 +1499,11 @@
          {set $autosave TRUE}
          {set $disable_save FALSE}
          {{dialog find dl_message.lbl} set_localized_text
-            {sprintf {localize permadeath_lost_restart_perc} $percent_hit_frac1 $accuracy_threshold}
+            {sprintf
+               {localize permadeath_lost_restart_perc}
+               $percent_hit_frac1
+               $accuracy_threshold
+            }
          }
          ;hide buttons
          {{dialog find dl_button1.btn} set_showing FALSE}
@@ -1483,10 +1540,14 @@
       ;print stats
       {if_else
          {||
-            {== $accuracy_threshold 99.9} {== $accuracy_threshold 99.8}
-            {== $accuracy_threshold 99.7} {== $accuracy_threshold 99.6}
-            {== $accuracy_threshold 99.5} {== $accuracy_threshold 99.4}
-            {== $accuracy_threshold 99.3} {== $accuracy_threshold 99.2}
+            {== $accuracy_threshold 99.9}
+            {== $accuracy_threshold 99.8}
+            {== $accuracy_threshold 99.7}
+            {== $accuracy_threshold 99.6}
+            {== $accuracy_threshold 99.5}
+            {== $accuracy_threshold 99.4}
+            {== $accuracy_threshold 99.3}
+            {== $accuracy_threshold 99.2}
             {== $accuracy_threshold 99.1}
          }
          {{dialog find dl_message.lbl} set_localized_text

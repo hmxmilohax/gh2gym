@@ -1,13 +1,13 @@
 #ifdef HX_XBOX
 (base_dir "BASLUS-21447")
 #else
-#ifdef GAME_GH2
-(base_dir "GH2GYM-21447")
-(elf_name "SLUS_214.47")
-#else
-(base_dir "80SGYM-21586")
-(elf_name "SLUS_215.86")
-#endif
+   #ifdef GAME_GH2
+   (base_dir "GH2GYM-21447")
+   (elf_name "SLUS_214.47")
+   #else
+   (base_dir "80SGYM-21586")
+   (elf_name "SLUS_215.86")
+   #endif
 #endif
 (ps2_icon
    (file "gh.icn")

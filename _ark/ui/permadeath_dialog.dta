@@ -86,9 +86,9 @@
       {{dialog_extended find dl_button4.btn} set_text {localize force_option}}
       {{dialog_extended find dl_button5.btn} set_text {localize unlock_option}}
       #ifdef HX_XBOX
-      #ifdef GAME_GH2
-      {{dialog_extended find dl_button6.btn} set_text {localize dlc_option}}
-      #endif
+         #ifdef GAME_GH2
+         {{dialog_extended find dl_button6.btn} set_text {localize dlc_option}}
+         #endif
       #endif
    )
    (SELECT_START_MSG
@@ -175,7 +175,12 @@
                   {ui goto_screen unlock_all_cant_save_screen}
                   {if_else $permadeath
                      {ui goto_screen permadeath_threshold_screen}
-                     {if_else #ifdef HX_XBOX FALSE #else $randomizer #endif ;cant save random setlist on ps2, skip on xbox
+                     {if_else
+                        #ifdef HX_XBOX
+                        FALSE
+                        #else
+                        $randomizer
+                        #endif ;cant save random setlist on ps2, skip on xbox
                         {ui goto_screen not_permadeath_cant_save_screen}
                         {ui goto_screen not_permadeath_save_screen}
                      }
@@ -214,12 +219,8 @@
    )
    (SELECT_START_MSG
       {switch $component
-         (dl_button1.btn
-            {ui goto_screen not_permadeath_save_screen}
-         )
-         (dl_button2.btn
-            {ui goto_screen not_permadeath_save_screen}
-         )
+         (dl_button1.btn {ui goto_screen not_permadeath_save_screen})
+         (dl_button2.btn {ui goto_screen not_permadeath_save_screen})
       }
    )
 }
@@ -236,12 +237,8 @@
    )
    (SELECT_START_MSG
       {switch $component
-         (dl_button1.btn
-            {ui goto_screen not_permadeath_save_screen}
-         )
-         (dl_button2.btn
-            {ui goto_screen not_permadeath_save_screen}
-         )
+         (dl_button1.btn {ui goto_screen not_permadeath_save_screen})
+         (dl_button2.btn {ui goto_screen not_permadeath_save_screen})
       }
    )
 }
@@ -287,9 +284,7 @@
          ;if empty, store our initial note count
          {set $lag_video_int 500}
          ;load note count if exists
-         {set $lag_video_int
-            {int {alph_to_num {symbol {campaign profile_name 4}}}}
-         }
+         {set $lag_video_int {int {alph_to_num {symbol {campaign profile_name 4}}}}}
          #endif
       }
       #ifdef HX_EE
@@ -318,7 +313,7 @@
             {int {alph_to_num {symbol {campaign profile_name 7}}}}
          }
       }
-      #ifdef HX_XBOX 
+      #ifdef HX_XBOX
       {campaign set_profile_name {sprint {num_to_alph {sprint $num_of_lives}}} 4}
       #else
       {campaign set_profile_name
@@ -368,7 +363,39 @@
       {dialog setup confirm none button1 none gh2_permadeath}
       {{dialog find dl_title.lbl} set_text {localize gh2_permadeath}}
       {if {! $accuracy_done_once}
-         {set $accuracy_threshold_arr (full_combo 99.9 99.8 99.7 99.6 99.5 99.4 99.3 99.2 99.1 99 98 97 96 95 94 93 92 91 90 89 88 87 86 85 84 83 82 81 80)}
+         {set $accuracy_threshold_arr
+            (full_combo
+               99.9
+               99.8
+               99.7
+               99.6
+               99.5
+               99.4
+               99.3
+               99.2
+               99.1
+               99
+               98
+               97
+               96
+               95
+               94
+               93
+               92
+               91
+               90
+               89
+               88
+               87
+               86
+               85
+               84
+               83
+               82
+               81
+               80
+            )
+         }
          {set $accuracy_threshold_elem 0}
       }
       {set $lowest_acc 0}
@@ -379,19 +406,31 @@
       {{dialog find dl_button2.btn} set_showing FALSE}
    )
    (update_threshold_counter
-      {set $accuracy_threshold {elem $accuracy_threshold_arr $accuracy_threshold_elem}}
+      {set $accuracy_threshold
+         {elem $accuracy_threshold_arr $accuracy_threshold_elem}
+      }
       {if_else {== $accuracy_threshold_elem 0}
-         {{dialog find dl_message.lbl} set_localized_text {sprintf {localize accuracy_threshold_fc} {localize $accuracy_threshold}}}
+         {{dialog find dl_message.lbl} set_localized_text
+            {sprintf {localize accuracy_threshold_fc} {localize $accuracy_threshold}}
+         }
          {if_else
             {||
-               {== $accuracy_threshold 99.9} {== $accuracy_threshold 99.8}
-               {== $accuracy_threshold 99.7} {== $accuracy_threshold 99.6}
-               {== $accuracy_threshold 99.5} {== $accuracy_threshold 99.4}
-               {== $accuracy_threshold 99.3} {== $accuracy_threshold 99.2}
+               {== $accuracy_threshold 99.9}
+               {== $accuracy_threshold 99.8}
+               {== $accuracy_threshold 99.7}
+               {== $accuracy_threshold 99.6}
+               {== $accuracy_threshold 99.5}
+               {== $accuracy_threshold 99.4}
+               {== $accuracy_threshold 99.3}
+               {== $accuracy_threshold 99.2}
                {== $accuracy_threshold 99.1}
             }
-            {{dialog find dl_message.lbl} set_localized_text {sprintf {localize accuracy_threshold_float} $accuracy_threshold}}
-            {{dialog find dl_message.lbl} set_localized_text {sprintf {localize accuracy_threshold_int} $accuracy_threshold}}
+            {{dialog find dl_message.lbl} set_localized_text
+               {sprintf {localize accuracy_threshold_float} $accuracy_threshold}
+            }
+            {{dialog find dl_message.lbl} set_localized_text
+               {sprintf {localize accuracy_threshold_int} $accuracy_threshold}
+            }
          }
       }
    )
@@ -511,9 +550,7 @@
          ;if empty, store our initial note count
          {set $lag_video_int 500}
          ;load note count if exists
-         {set $lag_video_int
-            {int {alph_to_num {symbol {campaign profile_name 4}}}}
-         }
+         {set $lag_video_int {int {alph_to_num {symbol {campaign profile_name 4}}}}}
          #endif
       }
       #ifdef HX_EE
@@ -657,7 +694,11 @@
       {{dialog find dl_title.lbl} set_text {localize gh2_permadeath}}
       ;print loss
       ;| || || |_
-      {if_else {|| {== $lives_lost {- $num_of_lives 1}} {<= {- $num_of_lives $lives_lost} 0}}
+      {if_else
+         {||
+            {== $lives_lost {- $num_of_lives 1}}
+            {<= {- $num_of_lives $lives_lost} 0}
+         }
          {{dialog find dl_message.lbl} set_localized_text
             {localize permadeath_lost_final}
          }
@@ -713,15 +754,27 @@
    )
    (SELECT_START_MSG
       {switch $component
-         (dl_button1.btn {reset_all_cheats} {campaign set_profile_slot 1} {ui goto_screen permadeath_options_screen})
-         (dl_button2.btn {$this backwards_anim} {ui goto_screen manage_band_mid_screen})
+         (dl_button1.btn
+            {reset_all_cheats}
+            {campaign set_profile_slot 1}
+            {ui goto_screen permadeath_options_screen}
+         )
+         (dl_button2.btn
+            {$this backwards_anim}
+            {ui goto_screen manage_band_mid_screen}
+         )
       }
    )
 }
 {new UIPanel
    manage_band_mid_panel
    (file manage_band.milo)
-   (focus {if_else {|| $gym_unlock_all {&& {! $permadeath} $disable_save}} delete_band.btn rename_band.btn})
+   (focus
+      {if_else {|| $gym_unlock_all {&& {! $permadeath} $disable_save}}
+         delete_band.btn
+         rename_band.btn
+      }
+   )
    (enter
       {manage_band.lbl set_localized_text {localize perma_welcome}}
       {rename_band.btn set text_token manage_band}
@@ -775,9 +828,7 @@
                {ui goto_screen options_chooseprof_screen}
             }
          )
-         (delete_band.btn
-            {ui goto_screen permadeath_go_to_options_screen}
-         )
+         (delete_band.btn {ui goto_screen permadeath_go_to_options_screen})
       }
       kDataUnhandled
    )
@@ -820,10 +871,14 @@
                {sprintf {localize overlay_threshold_fc} {localize $accuracy_threshold}}
                {if_else
                   {||
-                     {== $accuracy_threshold 99.9} {== $accuracy_threshold 99.8}
-                     {== $accuracy_threshold 99.7} {== $accuracy_threshold 99.6}
-                     {== $accuracy_threshold 99.5} {== $accuracy_threshold 99.4}
-                     {== $accuracy_threshold 99.3} {== $accuracy_threshold 99.2}
+                     {== $accuracy_threshold 99.9}
+                     {== $accuracy_threshold 99.8}
+                     {== $accuracy_threshold 99.7}
+                     {== $accuracy_threshold 99.6}
+                     {== $accuracy_threshold 99.5}
+                     {== $accuracy_threshold 99.4}
+                     {== $accuracy_threshold 99.3}
+                     {== $accuracy_threshold 99.2}
                      {== $accuracy_threshold 99.1}
                   }
                   {sprintf {localize overlay_threshold_float} $accuracy_threshold}
@@ -833,18 +888,34 @@
          )
          ($line2
             {if_else {== $accuracy_threshold_elem 0}
-               {sprintf {localize overlay_num_lives_streak} $this_note_streak {- $num_of_lives 1}}
+               {sprintf
+                  {localize overlay_num_lives_streak}
+                  $this_note_streak
+                  {- $num_of_lives 1}
+               }
                {if_else $lowest_acc
                   {if_else
                      {||
-                        {== $accuracy_threshold 99.9} {== $accuracy_threshold 99.8}
-                        {== $accuracy_threshold 99.7} {== $accuracy_threshold 99.6}
-                        {== $accuracy_threshold 99.5} {== $accuracy_threshold 99.4}
-                        {== $accuracy_threshold 99.3} {== $accuracy_threshold 99.2}
+                        {== $accuracy_threshold 99.9}
+                        {== $accuracy_threshold 99.8}
+                        {== $accuracy_threshold 99.7}
+                        {== $accuracy_threshold 99.6}
+                        {== $accuracy_threshold 99.5}
+                        {== $accuracy_threshold 99.4}
+                        {== $accuracy_threshold 99.3}
+                        {== $accuracy_threshold 99.2}
                         {== $accuracy_threshold 99.1}
                      }
-                     {sprintf {localize overlay_num_lives_acc_float} $lowest_acc {- $num_of_lives 1}}
-                     {sprintf {localize overlay_num_lives_acc_int} $lowest_acc {- $num_of_lives 1}}
+                     {sprintf
+                        {localize overlay_num_lives_acc_float}
+                        $lowest_acc
+                        {- $num_of_lives 1}
+                     }
+                     {sprintf
+                        {localize overlay_num_lives_acc_int}
+                        $lowest_acc
+                        {- $num_of_lives 1}
+                     }
                   }
                   {sprintf {localize overlay_num_lives} {- $num_of_lives 1}}
                }
@@ -868,8 +939,14 @@
    )
    (set_line
       ($prefix $i $text)
-      {{sprint $prefix $i "_shadow.lbl"} set alignment kMiddleRight}
-      {{sprint $prefix $i ".lbl"} set alignment kMiddleRight}
+      {{sprint $prefix $i "_shadow.lbl"} set
+         alignment
+         kMiddleRight
+      }
+      {{sprint $prefix $i ".lbl"} set
+         alignment
+         kMiddleRight
+      }
       {{sprint
             $prefix
             $i

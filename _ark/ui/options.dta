@@ -354,21 +354,21 @@
    (hits ())
    (seconds ())
    (window 50)
-   (min_hits 11)   ; vanilla: 7
-   (min_avg -500)  ; vanilla: -100
-   (max_avg 500)   ; vanilla: 250
+   (min_hits 11) ; vanilla: 7
+   (min_avg -500) ; vanilla: -100
+   (max_avg 500) ; vanilla: 250
    (update_groups
       {cond
          ({== [state] calibrating}
             {buttons.grp set showing FALSE}
             #ifdef HX_EE
-            {btn3.btn set showing FALSE}  ; ps2 doesn't support adding to grps
+            {btn3.btn set showing FALSE} ; ps2 doesn't support adding to grps
             #endif
          )
          (TRUE
             {buttons.grp set showing TRUE}
             #ifdef HX_EE
-            {btn3.btn set showing TRUE}  ; ps2 doesn't support adding to grps
+            {btn3.btn set showing TRUE} ; ps2 doesn't support adding to grps
             #endif
          )
       }
@@ -385,7 +385,7 @@
             ({'||' {== [state] adjusting_audio} {== [state] adjusting_video}}
                {push_back $array (fret1 help_accept)}
                {push_back $array (fret2 help_cancel)}
-               {push_back $array (start help_reset)}  ; use start instead of fret3, it has a fucked texture that i can't replace
+               {push_back $array (start help_reset)} ; use start instead of fret3, it has a fucked texture that i can't replace
                {push_back $array (strum help_adjsync)}
             )
             (TRUE
@@ -405,9 +405,15 @@
             {setting.lbl set_showing FALSE}
             {autocalibrate.btn set text_token lag_button_calibrate}
             {$this enable autocalibrate.btn}
-            {reset_to_zero.btn set text_token {sprintf {localize lag_audio_setting} {int $lag_audio}}}
+            {reset_to_zero.btn set
+               text_token
+               {sprintf {localize lag_audio_setting} {int $lag_audio}}
+            }
             {$this enable reset_to_zero.btn}
-            {btn3.btn set text_token {sprintf {localize lag_video_setting} {int $lag_video}}}
+            {btn3.btn set
+               text_token
+               {sprintf {localize lag_video_setting} {int $lag_video}}
+            }
             {$this enable btn3.btn}
          )
          (calibrating
@@ -415,29 +421,47 @@
             {instructions2.lbl set text_token ""}
          )
          (success
-            {set $lag_video $lag_video_dirty}  ; apply video cal
+            {set $lag_video $lag_video_dirty} ; apply video cal
             {instructions.lbl set text_token lag_success}
             {instructions2.lbl set_localized ""}
             {autocalibrate.btn set text_token lag_button_recalibrate}
-            {reset_to_zero.btn set text_token {sprintf {localize lag_audio_setting} {int $lag_audio}}}
-            {btn3.btn set text_token {sprintf {localize lag_video_setting} {int $lag_video}}}
+            {reset_to_zero.btn set
+               text_token
+               {sprintf {localize lag_audio_setting} {int $lag_audio}}
+            }
+            {btn3.btn set
+               text_token
+               {sprintf {localize lag_video_setting} {int $lag_video}}
+            }
          )
          (failure
             {instructions.lbl set text_token lag_info_failure}
             {instructions2.lbl set text_token ""}
             {autocalibrate.btn set text_token lag_button_recalibrate}
-            {reset_to_zero.btn set text_token {sprintf {localize lag_audio_setting} {int $lag_audio}}}
-            {btn3.btn set text_token {sprintf {localize lag_video_setting} {int $lag_video}}}
+            {reset_to_zero.btn set
+               text_token
+               {sprintf {localize lag_audio_setting} {int $lag_audio}}
+            }
+            {btn3.btn set
+               text_token
+               {sprintf {localize lag_video_setting} {int $lag_video}}
+            }
          )
          (adjusting_audio
             {$this disable autocalibrate.btn}
             {$this disable btn3.btn}
-            {reset_to_zero.btn set text_token {sprintf {localize lag_audio_setting} {int $lag_audio}}}
+            {reset_to_zero.btn set
+               text_token
+               {sprintf {localize lag_audio_setting} {int $lag_audio}}
+            }
          )
          (adjusting_video
             {$this disable autocalibrate.btn}
             {$this disable reset_to_zero.btn}
-            {btn3.btn set text_token {sprintf {localize lag_video_setting} {int $lag_video}}}
+            {btn3.btn set
+               text_token
+               {sprintf {localize lag_video_setting} {int $lag_video}}
+            }
          )
       }
    )
@@ -449,12 +473,11 @@
       {$this update_text}
    )
    (enter
-
       ; new objects
       {new BandButton btn3.btn}
       {btn3.btn copy reset_to_zero.btn kCopyShallow}
       #ifdef HX_XBOX
-      {buttons.grp add_object btn3.btn}  ; ps2 doesn't support adding to grps
+      {buttons.grp add_object btn3.btn} ; ps2 doesn't support adding to grps
       #endif
       {reset_to_zero.btn set nav_down btn3.btn}
       {btn3.btn set_local_pos -237 0 -130}
@@ -465,7 +488,7 @@
       {set [hits] {array 0}}
       {set [seconds] {array 0}}
    )
-   (exit {set_calibration} {save_calibration})  ; apply settings and write the milo
+   (exit {set_calibration} {save_calibration}) ; apply settings and write the milo
    (BUTTON_DOWN_MSG
       {if {== [state] adjusting_audio}
          {if {== $button kPad_DDown}
@@ -482,7 +505,15 @@
                {set $lag_audio [max_avg]}
             }
          }
-         {if {== $button #ifdef HX_XBOX kPad_Square #else kPad_Circle #endif}
+         {if
+            {==
+               $button
+               #ifdef HX_XBOX
+               kPad_Square
+               #else
+               kPad_Circle
+               #endif
+            }
             {play_sfx button_error}
             {set $lag_audio 0}
          }
@@ -503,7 +534,15 @@
                {set $lag_video [max_avg]}
             }
          }
-         {if {== $button #ifdef HX_XBOX kPad_Square #else kPad_Circle #endif}
+         {if
+            {==
+               $button
+               #ifdef HX_XBOX
+               kPad_Square
+               #else
+               kPad_Circle
+               #endif
+            }
             {play_sfx button_error}
             {set $lag_video 0}
          }
@@ -598,7 +637,7 @@
             {$task sleep 0.133}
             {resize [hits] 0}
             {resize [seconds] 0}
-            {set $lag_audio_dirty 0}  ; clear old result
+            {set $lag_audio_dirty 0} ; clear old result
 
             ; up num of hits to 16 (previously 11)
 
@@ -683,8 +722,6 @@
             {push_back [seconds] {taskmgr ui_seconds}}
             {$task sleep 0.133}
 
-
-
             {countdown.lbl set_localized ""}
             {$task sleep 0.6}
 
@@ -693,7 +730,19 @@
             ; 360 audio skew results: 41.61, 41.60, 42.65, 48.89, 49.93, 44.73,        46.83, 43.68, 46.80,        48.88, 46.83, 44.71, 44.74, 44.74, 45.77, 43.69,        45.78
             ; excluded numbers are outliers
             {set $lag_audio_dirty
-               {* {int {- {$this calculate_lag [window] [min_hits] [hits] [seconds]} #ifdef HX_XBOX 37.403529411765 #else 42.9355 #endif}} 1.0} ; ensure a rounded float
+               {*
+                  {int
+                     {-
+                        {$this calculate_lag [window] [min_hits] [hits] [seconds]}
+                        #ifdef HX_XBOX
+                        37.403529411765
+                        #else
+                        42.9355
+                        #endif
+                     }
+                  }
+                  1.0
+               } ; ensure a rounded float
             }
 
             ; proceed if successful
@@ -711,7 +760,7 @@
 
    ; ---------- VIDEO TEST ----------
    (start_video_countdown
-      {set $lag_audio $lag_audio_dirty}  ; apply audio cal
+      {set $lag_audio $lag_audio_dirty} ; apply audio cal
       {set $lag_aniamte_thread_wait TRUE}
       {set $lag_animate_thread_loop TRUE}
       {thread_task
@@ -739,7 +788,7 @@
             {$task sleep 0.133}
             {resize [hits] 0}
             {resize [seconds] 0}
-            {set $lag_video_dirty 0}  ; clear old result
+            {set $lag_video_dirty 0} ; clear old result
 
             ; up num of hits to 16 (previously 11)
 
@@ -824,8 +873,6 @@
             {push_back [seconds] {taskmgr ui_seconds}}
             {$task sleep 0.133}
 
-
-
             {countdown.lbl set_localized ""}
             {$task sleep 0.6}
 
@@ -833,10 +880,26 @@
             ; ps2 video skew results: 21.91, 20.87, 23.99, 21.91, 22.96,        26.07, 21.91, 23.99, 26.09, 22.94, 18.77, 28.16,         26.09, 20.86, 22.96, 23.99, 25.04, 22.97
             ; 360 video skew results: 6.24,  -7.30, 3.12,  2.08, -5.22,  -0.02, 3.12,  -3.13, -0.01, 1.03,  -7.32, -3.13, -1.03, -6.26, -3.12, -3.12,  1.04,  -5.20, -5.21, -7.32
             ; excluded numbers are outliers
-            {set $lag_video_dirty     ;i'm so sorry                                                                               PLUS        MINUS
-               {* {int {#ifdef HX_XBOX + #else - #endif {$this calculate_lag [window] [min_hits] [hits] [seconds]} #ifdef HX_XBOX 7.962 #else 12.415555555556 #endif}} 1.0} ; ensure a rounded float
+            {set $lag_video_dirty ;i'm so sorry                                                                               PLUS        MINUS
+               {*
+                  {int
+                     {
+                        #ifdef HX_XBOX
+                        +
+                        #else
+                        -
+                        #endif
+                        {$this calculate_lag [window] [min_hits] [hits] [seconds]}
+                        #ifdef HX_XBOX
+                        7.962
+                        #else
+                        12.415555555556
+                        #endif
+                     }
+                  }
+                  1.0
+               } ; ensure a rounded float
             }
-
 
             ; proceed if successful
             {if_else {&& {> $lag_video_dirty [min_avg]} {< $lag_video_dirty [max_avg]}}

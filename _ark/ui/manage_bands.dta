@@ -368,12 +368,12 @@
                   {if_else $permadeath
                      0
                      {if_else $randomizer
-                     1
-                     {if_else $gym_unlock_all
-                        3
-                        2
+                        1
+                        {if_else $gym_unlock_all
+                           3
+                           2
+                        }
                      }
-                  }
                   }
                }
             }

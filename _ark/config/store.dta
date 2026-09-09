@@ -8,7 +8,15 @@
    (corvus (price 550))
    (es335 (price 850))
    (kramer_650 (price 700))
-   (eds (price #ifdef GAME_GH2 700 #else 900 #endif))
+   (eds
+      (price
+         #ifdef GAME_GH2
+         700
+         #else
+         900
+         #endif
+      )
+   )
    (lespaul_doublecut_sticker (price 700))
    (lespaul_sonex (price 550))
    (lespaul_marauder (price 550))
@@ -17,16 +25,100 @@
    (chet_atkins (price 800))
    (fish_reward (price 1000))
    #ifdef _SHIP
-   (scythe (price #ifdef GAME_GH2 3000 #else 4000 #endif))
+   (scythe
+      (price
+         #ifdef GAME_GH2
+         3000
+         #else
+         4000
+         #endif
+      )
+   )
    #endif
-   (usa_reward (price #ifdef HX_XBOX #ifdef GAME_GH2 1500 #else 2000 #endif #else 2000 #endif))
-   (coffin_reward (price #ifdef HX_XBOX #ifdef GAME_GH2 1000 #else 2000 #endif #else 2000 #endif))
-   (viking_reward (price #ifdef HX_XBOX #ifdef GAME_GH2 2000 #else 3000 #endif #else 3000 #endif))
-   (snaketapus_reward (price #ifdef HX_XBOX #ifdef GAME_GH2 1000 #else 2000 #endif #else 2000 #endif))
-   (eyeball_reward (price #ifdef HX_XBOX #ifdef GAME_GH2 2000 #else 3000 #endif #else 3000 #endif))
+   (usa_reward
+      (price
+         #ifdef HX_XBOX
+            #ifdef GAME_GH2
+            1500
+            #else
+            2000
+            #endif
+         #else
+         2000
+         #endif
+      )
+   )
+   (coffin_reward
+      (price
+         #ifdef HX_XBOX
+            #ifdef GAME_GH2
+            1000
+            #else
+            2000
+            #endif
+         #else
+         2000
+         #endif
+      )
+   )
+   (viking_reward
+      (price
+         #ifdef HX_XBOX
+            #ifdef GAME_GH2
+            2000
+            #else
+            3000
+            #endif
+         #else
+         3000
+         #endif
+      )
+   )
+   (snaketapus_reward
+      (price
+         #ifdef HX_XBOX
+            #ifdef GAME_GH2
+            1000
+            #else
+            2000
+            #endif
+         #else
+         2000
+         #endif
+      )
+   )
+   (eyeball_reward
+      (price
+         #ifdef HX_XBOX
+            #ifdef GAME_GH2
+            2000
+            #else
+            3000
+            #endif
+         #else
+         3000
+         #endif
+      )
+   )
    (battleaxe_reward (price 2000))
-   (log_reward (price #ifdef GAME_GH2 3000 #else 4000 #endif))
-   (guitar_red_octane (price #ifdef GAME_GH2 3000 #else 4000 #endif))
+   (log_reward
+      (price
+         #ifdef GAME_GH2
+         3000
+         #else
+         4000
+         #endif
+      )
+   )
+   (guitar_red_octane
+      (price
+         #ifdef GAME_GH2
+         3000
+         #else
+         4000
+         #endif
+      )
+   )
 )
 (skin
    (lp_cayenne (price 250))
@@ -113,11 +205,21 @@
 )
 (video
    (video3
-      (file #ifdef HX_XBOX hmx.wmv #else hmx.pss #endif)
+      #ifdef HX_EE
+      (file hmx.pss)
+      #endif
+      #ifdef HX_XBOX
+      (file hmx.wmv)
+      #endif
       (price 1500)
    )
    (video2
-      (file #ifdef HX_XBOX wg.wmv #else wg.pss #endif)
+      #ifdef HX_EE
+      (file wg.pss)
+      #endif
+      #ifdef HX_XBOX
+      (file wg.wmv)
+      #endif
       (price 1500)
    )
 )

@@ -18,11 +18,7 @@
                }
             }
          }
-         {if_else
-            {||
-               $strum_limit_disabled
-               $trogdor
-            }
+         {if_else {|| $strum_limit_disabled $trogdor}
             {set $strumlimit 0.0}
             {set $strumlimit 52.0}
          }
@@ -30,9 +26,9 @@
       #ifdef HX_XBOX
       {eval {eval {$strumlimit_setter get set_strum_limit}}}
       #else
-      #ifdef _SHIP
-      {eval {elem {$strumlimit_setter get set_strum_limit} 0}}
-      #endif
+         #ifdef _SHIP
+         {eval {elem {$strumlimit_setter get set_strum_limit} 0}}
+         #endif
       #endif
       {tip.lbl set_localized_text {tips random_tip}}
       {{game get_bank_loader} reset}

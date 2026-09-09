@@ -11,7 +11,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed badreputation} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed badreputation}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/badreputation/badreputation)
       (tracks
@@ -86,7 +91,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed beastandtheharlot} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed beastandtheharlot}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/beastandtheharlot/beastandtheharlot)
       (tracks
@@ -161,7 +171,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed cantyouhearme} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed cantyouhearme}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/cantyouhearme/cantyouhearme)
       (tracks ((guitar (2 3))))
@@ -244,7 +259,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed carrymehome} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed carrymehome}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/carrymehome/carrymehome)
       (tracks
@@ -319,7 +339,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed carryonwayward} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed carryonwayward}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/carryonwayward/carryonwayward)
       (tracks
@@ -394,7 +419,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed cherrypie} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed cherrypie}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/cherrypie/cherrypie)
       (tracks
@@ -469,7 +499,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed crazyonyou} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed crazyonyou}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/crazyonyou/crazyonyou)
       (tracks
@@ -545,7 +580,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed freebird} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed freebird}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/freebird/freebird)
       (tracks ((guitar (2 3))))
@@ -628,7 +668,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed freya} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed freya}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/freya/freya)
       (tracks
@@ -703,7 +748,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed girlfriend} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed girlfriend}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/girlfriend/girlfriend)
       (tracks ((guitar (2 3))))
@@ -786,7 +836,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed hangar18} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed hangar18}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/hangar18/hangar18)
       (tracks
@@ -861,7 +916,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed heartshapedbox} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed heartshapedbox}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/heartshapedbox/heartshapedbox)
       (tracks
@@ -936,7 +996,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed institutionalized} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed institutionalized}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/institutionalized/institutionalized)
       (tracks ((guitar (2 3))))
@@ -1019,7 +1084,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed jessica} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed jessica}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/jessica/jessica)
       (tracks ((guitar (2 3))))
@@ -1103,7 +1173,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed johnthefisherman} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed johnthefisherman}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/johnthefisherman/johnthefisherman)
       (tracks
@@ -1178,7 +1253,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed killinginthenameof} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed killinginthenameof}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/killinginthenameof/killinginthenameof)
       (tracks
@@ -1253,7 +1333,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed laidtorest} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed laidtorest}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/laidtorest/laidtorest)
       (tracks ((guitar (2 3))))
@@ -1336,7 +1421,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed lastchild} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed lastchild}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/lastchild/lastchild)
       (tracks ((guitar (2 3))))
@@ -1419,7 +1509,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed madhouse} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed madhouse}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/madhouse/madhouse)
       (tracks
@@ -1494,7 +1589,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed messageinabottle} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed messageinabottle}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/messageinabottle/messageinabottle)
       (tracks
@@ -1569,7 +1669,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed misirlou} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed misirlou}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/misirlou/misirlou)
       (tracks
@@ -1645,7 +1750,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed mother} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed mother}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/mother/mother)
       (tracks ((guitar (2 3))))
@@ -1728,7 +1838,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed monkeywrench} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed monkeywrench}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/monkeywrench/monkeywrench)
       (tracks
@@ -1807,7 +1922,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed psychobilly} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed psychobilly}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/psychobilly/psychobilly)
       (tracks
@@ -1882,7 +2002,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed rockthistown} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed rockthistown}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/rockthistown/rockthistown)
       (tracks
@@ -1957,7 +2082,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed searchanddestroy} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed searchanddestroy}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/searchanddestroy/searchanddestroy)
       (tracks
@@ -2032,7 +2162,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed shoutatthedevil} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed shoutatthedevil}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/shoutatthedevil/shoutatthedevil)
       (tracks
@@ -2107,7 +2242,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed stop} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed stop}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/stop/stop)
       (tracks
@@ -2182,7 +2322,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed strutter} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed strutter}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/strutter/strutter)
       (tracks ((guitar (2 3))))
@@ -2265,7 +2410,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed surrender} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed surrender}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/surrender/surrender)
       (tracks
@@ -2340,7 +2490,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed sweetchild} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed sweetchild}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/sweetchild/sweetchild)
       (tracks
@@ -2415,7 +2570,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed tattooedloveboys} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed tattooedloveboys}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/tattooedloveboys/tattooedloveboys)
       (tracks
@@ -2494,7 +2654,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed thembones} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed thembones}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/thembones/thembones)
       (tracks
@@ -2569,7 +2734,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed tonightimgonna} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed tonightimgonna}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/tonightimgonna/tonightimgonna)
       (tracks ((guitar (2 3))))
@@ -2652,7 +2822,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed trippinonahole} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed trippinonahole}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/trippinonahole/trippinonahole)
       (tracks
@@ -2727,7 +2902,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed warpigs} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed warpigs}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/warpigs/warpigs)
       (tracks
@@ -2802,7 +2982,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed whowasinmyroom} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed whowasinmyroom}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/whowasinmyroom/whowasinmyroom)
       (tracks ((guitar (2 3))))
@@ -2890,7 +3075,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed woman} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed woman}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/woman/woman)
       (tracks
@@ -2965,7 +3155,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed youreallygotme} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed youreallygotme}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/youreallygotme/youreallygotme)
       (tracks
@@ -3040,7 +3235,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed yyz} mtv_made_famous caption_unknown})
+   (caption
+      {if_else {song_completed yyz}
+         mtv_made_famous
+         caption_unknown
+      }
+   )
    (song
       (name songs/yyz/yyz)
       (tracks
@@ -3116,7 +3316,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed arterialblack} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed arterialblack}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/arterialblack/arterialblack_sp)
       (tracks ((guitar (2 3))))
@@ -3199,7 +3404,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed collide} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed collide}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/collide/collide)
       (tracks
@@ -3274,7 +3484,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed elephantbones} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed elephantbones}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/elephantbones/elephantbones)
       (tracks
@@ -3349,7 +3564,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed fallofpangea} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed fallofpangea}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/fallofpangea/fallofpangea)
       (tracks
@@ -3424,7 +3644,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed ftk} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed ftk}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/ftk/ftk)
       (tracks
@@ -3500,7 +3725,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed gemini} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed gemini}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/gemini/gemini)
       (tracks
@@ -3576,7 +3806,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed jordan} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed jordan}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/jordan/jordan)
       (tracks
@@ -3652,7 +3887,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed ladylightning} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed ladylightning}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/ladylightning/ladylightning)
       (tracks
@@ -3727,7 +3967,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed laughtrack} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed laughtrack}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/laughtrack/laughtrack)
       (tracks ((guitar (2 3))))
@@ -3810,7 +4055,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed lesstalkmorerokk} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed lesstalkmorerokk}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/lesstalkmorerokk/lesstalkmorerokk)
       (tracks ((guitar (2 3))))
@@ -3894,7 +4144,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed mrfixit} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed mrfixit}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/mrfixit/mrfixit)
       (tracks
@@ -3969,7 +4224,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed newblack} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed newblack}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/newblack/newblack)
       (tracks
@@ -4044,7 +4304,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed onefortheroad} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed onefortheroad}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/onefortheroad/onefortheroad)
       (tracks
@@ -4123,7 +4388,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed parasite} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed parasite}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/parasite/parasite)
       (tracks
@@ -4198,7 +4468,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed radiumeyes} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed radiumeyes}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/radiumeyes/radiumeyes)
       (tracks
@@ -4273,7 +4548,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed redlottery} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed redlottery}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/redlottery/redlottery)
       (tracks
@@ -4348,7 +4628,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed rawdog} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed rawdog}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/rawdog/rawdog)
       (tracks
@@ -4427,7 +4712,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed six} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed six}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/six/six)
       (tracks
@@ -4502,7 +4792,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed soybomb} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed soybomb}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/soybomb/soybomb)
       (tracks ((guitar (2 3))))
@@ -4586,7 +4881,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed thelightthatblinds} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed thelightthatblinds}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/thelightthatblinds/thelightthatblinds)
       (tracks
@@ -4661,7 +4961,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed thunderhorse} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed thunderhorse}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/thunderhorse/thunderhorse)
       (tracks
@@ -4740,7 +5045,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed trogdor} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed trogdor}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/trogdor/trogdor)
       (tracks ((guitar (2 3))))
@@ -4823,7 +5133,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed trogdor} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed trogdor}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/trogdor/trogdor)
       (tracks ((guitar (2 3))))
@@ -4906,7 +5221,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed xstream} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed xstream}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/xstream/xstream)
       (tracks
@@ -4985,7 +5305,12 @@
          "??????????"
       }
    )
-   (caption {if_else {song_completed yeswecan} performed_by caption_unknown})
+   (caption
+      {if_else {song_completed yeswecan}
+         performed_by
+         caption_unknown
+      }
+   )
    (song
       (name songs/yeswecan/yeswecan)
       (tracks

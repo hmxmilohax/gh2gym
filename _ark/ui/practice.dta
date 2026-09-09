@@ -432,9 +432,7 @@
          )
       )
    )
-   #ifdef HX_XBOX
    (enter {mtv_overlay_panel set_showing FALSE})
-   #endif
    (SELECT_START_MSG {game_restart} kDataUnhandled)
    (BUTTON_DOWN_MSG
       {if {== $button kPad_Tri}
