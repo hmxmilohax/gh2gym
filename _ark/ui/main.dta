@@ -51,11 +51,11 @@
       }
       ;don't scan dlc
       #ifdef HX_XBOX
-         #ifdef GAME_GH2
+         ;#ifdef GAME_GH2
          {if $scandlc
             {content_mgr start_enumeration}
          }
-         #endif
+         ;#endif
       #endif
       ;enable hyperspeed
       {if {|| $permadeath $randomizer}

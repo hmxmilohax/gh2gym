@@ -227,11 +227,11 @@
       {$this turn_off_ambient}
       ;don't scan dlc
       #ifdef HX_XBOX
-         #ifdef GAME_GH2
+         ;#ifdef GAME_GH2
          {if $scandlc
             {content_mgr start_enumeration}
          }
-         #endif
+         ;#endif
       #endif
    )
    (resume_from_practice
@@ -1300,11 +1300,11 @@
    (load
       {profilemgr add_sink $this storage_changed}
       ;don't scan dlc
-      #ifdef GAME_GH2
+      ;#ifdef GAME_GH2
       {if $scandlc
          {content_mgr start_enumeration}
       }
-      #endif
+      ;#endif
    )
    (storage_changed
       {$this clear_cache}
@@ -1387,16 +1387,6 @@
             ($index {ss_song.lst selected_pos})
             ($song {song_provider get_symbol $index})
             {campaign cheat_beat_song $song $score}
-            {$this refresh}
-         }
-      }
-   )
-   (beat_song
-      {if {$this is_up}
-         {do
-            ($index {ss_song.lst selected_pos})
-            ($song {song_provider get_symbol $index})
-            {campaign beat_song $song}
             {$this refresh}
          }
       }

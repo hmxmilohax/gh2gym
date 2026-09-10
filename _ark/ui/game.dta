@@ -73,6 +73,7 @@
       }
       {print "encore song is " [encore_song] "\n"}
       #ifdef GAME_GH2
+      #ifdef HX_XBOX
       {do
          ($tonight FALSE)
          {foreach $entry {find $syscfg mapped_songs}
@@ -92,6 +93,7 @@
             {{{world_panel loaded_dir} find drummer} show_drummer}
          }
       }
+      #endif
       #endif
    )
    (intro_start_msg
@@ -405,7 +407,7 @@
          {handle ($this multi_player)}
          {handle ($this single_player)}
       }
-      {$this set_showing TRUE} ;why does gym do this?
+      {$this set_showing TRUE}
       {$this set_paused FALSE}
    )
    #ifdef HX_XBOX

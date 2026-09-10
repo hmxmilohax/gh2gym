@@ -57,17 +57,17 @@
          {dl_button5.btn set_text {localize unlock_option}}
 
          #ifdef HX_XBOX
-            #ifdef GAME_GH2
+            ;#ifdef GAME_GH2
             {dl_button6.btn set_text {localize dlc_option}}
             {dl_buttons.view set_local_pos 0 0 40}
             {dl_buttons.view set_local_scale 0.80 1 0.80}
-            #else
-            {dl_button6.btn set_text " "}
-            {dl_buttons.view set_local_pos 0 0 30}
-            {dl_buttons.view set_local_scale 0.85 1 0.85}
-            {$this disable dl_button6.btn}
-            {dl_button6.btn set_showing FALSE}
-            #endif
+            ;#else
+            ;{dl_button6.btn set_text " "}
+            ;{dl_buttons.view set_local_pos 0 0 30}
+            ;{dl_buttons.view set_local_scale 0.85 1 0.85}
+            ;{$this disable dl_button6.btn}
+            ;{dl_button6.btn set_showing FALSE}
+            ;#endif
          #endif
          #ifndef HX_XBOX
          {dl_button6.btn set_text " "}
@@ -86,9 +86,9 @@
       {{dialog_extended find dl_button4.btn} set_text {localize force_option}}
       {{dialog_extended find dl_button5.btn} set_text {localize unlock_option}}
       #ifdef HX_XBOX
-         #ifdef GAME_GH2
+         ;#ifdef GAME_GH2
          {{dialog_extended find dl_button6.btn} set_text {localize dlc_option}}
-         #endif
+         ;#endif
       #endif
    )
    (SELECT_START_MSG
